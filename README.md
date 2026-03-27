@@ -1,4 +1,4 @@
-# anamorphic-chat-app
+# Anamorphic chat app
 A real-time end-to-end encrypted chat application using the ElGamal cryptosystem to build Anamorphic Encryption. Every message carries two independent channels — a public message which could be visible if private key is compromised, and a secret message hidden under public message that only the intended recipient can decrypt with double key — all inside a single ciphertext that looks like a normal encryption to any outside observer.
 
 ---
@@ -7,17 +7,17 @@ A real-time end-to-end encrypted chat application using the ElGamal cryptosystem
  
 ```
 ┌─────────────────────────────────────────────────────┐
-│                    CLIENT (Browser)                  │
+│                    CLIENT (Browser)                 │
 │                                                     │
 │  React + Vite                                       │
 │  ┌─────────────────┐   ┌─────────────────────────┐  │
-│  │   UI Components  │   │    Crypto Layer          │  │
-│  │  ChatRoom        │   │  cryptoUtils.js          │  │
-│  │  MessageInput    │   │  anamorphicCrypto.js     │  │
-│  │  MessageList     │   │                          │  │
-│  │  UserList        │   │  - ElGamal PKE           │  │
-│  │  AddFriendsModal │   │  - NIZK Mock             │  │
-│  │  KeyFileModal    │   │  - Key gen / file I/O    │  │
+│  │   UI Components │   │    Crypto Layer         │  │
+│  │  ChatRoom       │   │  cryptoUtils.js         │  │
+│  │  MessageInput   │   │  anamorphicCrypto.js    │  │
+│  │  MessageList    │   │                         │  │
+│  │  UserList       │   │  - ElGamal PKE          │  │
+│  │  AddFriendsModa │   │  - NIZK Mock            │  │
+│  │  KeyFileModal   │   │  - Key gen / file I/O   │  │
 │  └─────────────────┘   └─────────────────────────┘  │
 │                                                     │
 │  Keys stored:                                       │
@@ -28,7 +28,7 @@ A real-time end-to-end encrypted chat application using the ElGamal cryptosystem
 └────────────────────┬────────────────────────────────┘
                      │ WebSocket + REST
 ┌────────────────────▼────────────────────────────────┐
-│                    SERVER (FastAPI)                  │
+│                    SERVER (FastAPI)                 │
 │                                                     │
 │  /auth/signup   /auth/login   /auth/logout          │
 │  /friends/list  /friends/add  /friends/available    │
